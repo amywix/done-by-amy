@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Done By Amy | AI Chatbots for Small Business</title>
+  <meta name="description" content="Done By Amy builds AI chatbots, AI receptionists, lead capture bots and automation systems for small businesses that want faster replies, more leads and less admin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+/* =========================================================
+DONE BY AMY
+CLEAN PRODUCTION THEME
+WHITE PAGE + PURPLE ACCENTS + DARK PURPLE HEADER
+========================================================= */
+
+:root{
+  --bg:#f6f7fb;
+  --bg-soft:#f0f2f8;
+  --card:#ffffff;
+  --card-soft:#fbfaff;
+  --text:#111827;
+  --heading:#0f172a;
+  --muted:#667085;
+  --white:#ffffff;
+
+  --purple:#9333ea;
+  --purple-dark:#35105f;
+  --purple-deep:#1b0630;
+  --purple-mid:#581c87;
+  --purple-light:#c084fc;
+  --purple-soft:#faf5ff;
+
+  --border:#e7eaf1;
+  --border-purple:rgba(147,51,234,.14);
+  --shadow:0 20px 55px rgba(15,23,42,.08);
+  --shadow-purple:0 18px 42px rgba(147,51,234,.20);
+  --gradient:linear-gradient(135deg,#7e22ce 0%,#9333ea 52%,#c084fc 100%);
+  --header-gradient:linear-gradient(135deg,#14031f 0%,#2a0a4a 42%,#581c87 100%);
+  --radius:28px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at top left,rgba(147,51,234,.07),transparent 28%),
+    radial-gradient(circle at bottom right,rgba(192,132,252,.08),transparent 32%),
+    linear-gradient(180deg,#ffffff 0%,#f7f9fc 45%,#eef2f7 100%);
+  color:var(--text);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+ul{padding-left:18px;}
+
+.page{
+  width:min(1400px,calc(100% - 28px));
+  margin:24px auto;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:36px;
+  overflow:clip;
+  box-shadow:var(--shadow);
+}
+.container{width:min(1180px,calc(100% - 40px));margin:auto;}
+
+/* HEADER / MENU FIX */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  width:100%;
+  min-height:92px;
+  background:var(--header-gradient);
+  border-bottom:1px solid rgba(255,255,255,.10);
+  box-shadow:0 16px 40px rgba(31,7,55,.25);
+}
+.nav-wrap{
+  width:min(1320px,calc(100% - 56px));
+  min-height:92px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.logo-wrap{display:flex;align-items:center;flex:0 0 auto;}
+.site-logo{
+  width:174px;
+  height:auto;
+  max-height:66px;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.35));
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  flex:1;
+}
+.nav-links a{
+  color:#f5f3ff;
+  font-size:14px;
+  font-weight:750;
+  line-height:1;
+  white-space:nowrap;
+  opacity:.94;
+  transition:.22s ease;
+}
+.nav-links a:hover{color:#e9d5ff;opacity:1;}
+.nav-btn{flex:0 0 auto;white-space:nowrap;}
+.mobile-toggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.08);
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* BUTTONS */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-white{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:15px 22px;
+  border-radius:15px;
+  font-size:14px;
+  font-weight:800;
+  line-height:1;
+  border:0;
+  cursor:pointer;
+  transition:.22s ease;
+}
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-white:hover{transform:translateY(-2px);}
+.btn-primary,
+.primary{
+  background:var(--gradient);
+  color:white;
+  border:1px solid rgba(255,255,255,.30);
+  box-shadow:var(--shadow-purple);
+}
+.btn-secondary,
+.secondary{
+  background:white;
+  color:#271137;
+  border:1px solid var(--border-purple);
+  box-shadow:0 12px 28px rgba(15,23,42,.05);
+}
+.btn-white{
+  background:white;
+  color:var(--purple-mid);
+  border:1px solid rgba(255,255,255,.50);
+}
+.nav-btn{
+  background:white;
+  color:var(--purple-mid);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);
+  gap:70px;
+  align-items:center;
+  padding:92px 0 90px;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:-60px -80px auto auto;
+  width:420px;
+  height:420px;
+  background:radial-gradient(circle,rgba(147,51,234,.12),transparent 66%);
+  pointer-events:none;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(147,51,234,.08);
+  border:1px solid rgba(147,51,234,.14);
+  color:var(--purple);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:26px;
+}
+h1{
+  font-size:clamp(3rem,6vw,5.3rem);
+  line-height:.94;
+  letter-spacing:-.07em;
+  margin-bottom:26px;
+  color:var(--heading);
+}
+h1 span,
+.gradient{
+  background:linear-gradient(135deg,#7e22ce,#a855f7,#c084fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.lead{
+  max-width:660px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.85;
+  margin-bottom:34px;
+}
+.actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
+.mini-proof{display:flex;flex-wrap:wrap;gap:12px;}
+.mini-proof span{
+  padding:10px 14px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--border-purple);
+  color:#4b5563;
+  font-size:13px;
+  font-weight:800;
+}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:500px;}
+.hero-circle{
+  position:absolute;
+  width:390px;
+  height:390px;
+  border-radius:50%;
+  border:2px dashed rgba(147,51,234,.18);
+  background:radial-gradient(circle,rgba(147,51,234,.06),transparent 65%);
+}
+.hero-card{
+  position:relative;
+  z-index:2;
+  width:min(100%,390px);
+  background:white;
+  border:1px solid var(--border-purple);
+  border-radius:30px;
+  padding:22px;
+  box-shadow:0 24px 70px rgba(15,23,42,.12);
+}
+.chat-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  background:var(--gradient);
+  color:white;
+  padding:18px 20px;
+  border-radius:18px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+.status{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+}
+.chat-bubble{
+  padding:15px 17px;
+  border-radius:18px;
+  margin-bottom:13px;
+  line-height:1.6;
+  font-size:14px;
+}
+.bot{width:86%;background:#faf5ff;color:#4b5563;border:1px solid rgba(147,51,234,.08);}
+.user{width:82%;margin-left:auto;background:var(--gradient);color:white;}
+.lead-captured{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:16px;
+  padding:15px 17px;
+  border-radius:18px;
+  background:#f0fdf4;
+  color:#166534;
+  font-weight:900;
+  border:1px solid #bbf7d0;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-bottom:100px;
+}
+.stat{
+  background:white;
+  border:1px solid var(--border-purple);
+  border-radius:24px;
+  padding:26px;
+  box-shadow:0 10px 28px rgba(15,23,42,.05);
+}
+.stat strong{display:block;color:var(--purple);font-size:32px;margin-bottom:8px;}
+.stat span{color:var(--muted);line-height:1.65;}
+
+/* SECTIONS */
+section{padding-bottom:105px;scroll-margin-top:118px;}
+.section-head{max-width:780px;margin-bottom:54px;}
+.eyebrow{
+  color:var(--purple);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+h2{
+  font-size:clamp(2.4rem,4.5vw,4.1rem);
+  line-height:1;
+  letter-spacing:-.055em;
+  color:var(--heading);
+  margin-bottom:18px;
+}
+.section-head p,.section-copy{color:var(--muted);line-height:1.9;font-size:16px;}
+
+/* GRIDS */
+.cards,.packages,.work-grid,.use-grid{display:grid;gap:22px;align-items:stretch;}
+.cards{grid-template-columns:repeat(4,1fr);}
+.packages{grid-template-columns:repeat(3,1fr);}
+.work-grid{grid-template-columns:repeat(3,1fr);}
+.use-grid{grid-template-columns:repeat(3,1fr);}
+
+.card,.package-card,.work-card,.use-card,.contact-card,.faq details{
+  position:relative;
+  background:white;
+  border:1px solid var(--border-purple);
+  border-radius:26px;
+  padding:30px;
+  box-shadow:0 12px 32px rgba(15,23,42,.055);
+  overflow:hidden;
+  transition:.26s ease;
+}
+.card:hover,.package-card:hover,.work-card:hover,.use-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(147,51,234,.28);
+  box-shadow:0 20px 48px rgba(15,23,42,.09);
+}
+.card::before,.package-card::before,.work-card::before,.use-card::before{
+  content:"";
+  position:absolute;
+  top:-90px;
+  right:-90px;
+  width:190px;
+  height:190px;
+  background:radial-gradient(circle,rgba(147,51,234,.10),transparent 70%);
+}
+.featured{border-color:rgba(147,51,234,.30);box-shadow:0 16px 42px rgba(147,51,234,.10);}
+.icon{
+  width:68px;
+  height:68px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(147,51,234,.13),rgba(192,132,252,.08));
+  color:var(--purple);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  margin-bottom:22px;
+}
+.card h3,.package-card h3,.work-card h3,.use-card h3{font-size:24px;color:var(--heading);margin-bottom:14px;}
+.card p,.package-card p,.work-card p,.use-card p{color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.learn{position:relative;z-index:2;color:var(--purple);font-weight:900;margin-top:auto;}
+
+/* PRICING */
+.badge{
+  display:inline-flex;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(147,51,234,.08);
+  border:1px solid rgba(147,51,234,.10);
+  color:var(--purple);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.price{font-size:52px;font-weight:900;color:var(--purple);margin:15px 0 4px;}
+.price span{font-size:16px;color:var(--muted);}
+.setup{font-weight:900;color:#334155;margin-bottom:16px;}
+.package-card ul{color:var(--muted);line-height:2;margin:10px 0 28px;}
+.package-card .btn{margin-top:auto;}
+
+/* PROCESS */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;}
+.process{display:grid;gap:16px;}
+.process-step{
+  display:grid;
+  grid-template-columns:56px 1fr;
+  gap:18px;
+  background:white;
+  border:1px solid var(--border-purple);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(15,23,42,.045);
+}
+.step-num{
+  width:48px;height:48px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--gradient);color:white;font-weight:900;
+}
+.process-step h3{font-size:20px;margin-bottom:7px;color:var(--heading);}
+.process-step p{color:var(--muted);line-height:1.7;}
+
+/* SOLUTIONS */
+.solution-thumb{
+  height:210px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:24px;
+  background:linear-gradient(135deg,#fbfaff,#f6edff);
+  border-radius:22px;
+  border:1px solid rgba(147,51,234,.08);
+}
+.solution-img{width:100%;max-width:220px;height:170px;object-fit:contain;filter:drop-shadow(0 12px 22px rgba(147,51,234,.14));}
+
+/* FAQ */
+.faq{display:grid;gap:14px;}
+.faq details{padding:0;}
+.faq summary{cursor:pointer;list-style:none;padding:24px 28px;font-weight:900;color:var(--heading);}
+.faq summary::-webkit-details-marker{display:none;}
+.faq p{padding:0 28px 24px;color:var(--muted);line-height:1.8;}
+
+/* CTA */
+.cta{
+  background:var(--gradient);
+  border-radius:34px;
+  padding:56px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:32px;
+  color:white;
+  box-shadow:var(--shadow-purple);
+}
+.cta h2{color:white;margin-bottom:14px;}
+.cta p{color:#f3e8ff;line-height:1.75;}
+
+/* CONTACT */
+.contact-card{padding:42px;}
+.contact-form{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px;}
+.contact-form input,.contact-form select,.contact-form textarea{
+  width:100%;
+  border:1px solid rgba(147,51,234,.13);
+  background:#fff;
+  border-radius:16px;
+  padding:16px 17px;
+  color:var(--text);
+  font-family:inherit;
+  font-size:15px;
+  outline:none;
+}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:rgba(147,51,234,.45);box-shadow:0 0 0 4px rgba(147,51,234,.08);}
+.contact-form textarea{grid-column:1/-1;min-height:130px;resize:vertical;}
+.contact-form button{grid-column:1/-1;}
+
+/* FOOTER */
+footer{
+  width:min(1400px,calc(100% - 28px));
+  margin:0 auto 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  text-align:center;
+  padding:34px;
+  color:var(--purple);
+  font-weight:900;
+}
+.footer-logo{width:110px;height:auto;}
+
+/* RESPONSIVE */
+@media(max-width:1120px){
+  .nav-links{gap:20px;}
+  .nav-links a{font-size:13px;}
+  .site-logo{width:154px;}
+  .cards{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:980px){
+  .nav-wrap{width:calc(100% - 36px);}
+  .mobile-toggle{display:flex;align-items:center;justify-content:center;}
+  .nav-links{
+    position:absolute;
+    top:92px;
+    left:18px;
+    right:18px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:14px;
+    background:#24073f;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.28);
+  }
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:15px 16px;border-radius:14px;}
+  .nav-links a:hover{background:rgba(255,255,255,.08);}
+  .nav-btn{display:none;}
+  .hero,.split{grid-template-columns:1fr;gap:48px;}
+  .hero{padding-top:66px;}
+  .stats,.packages,.work-grid,.use-grid{grid-template-columns:1fr;}
+}
+@media(max-width:700px){
+  .page{width:calc(100% - 14px);margin:14px auto;border-radius:24px;}
+  .container{width:calc(100% - 30px);}
+  .site-header,.nav-wrap{min-height:82px;}
+  .nav-links{top:82px;}
+  .site-logo{width:142px;}
+  h1{font-size:3.05rem;letter-spacing:-.06em;}
+  h2{font-size:2.25rem;}
+  .hero{padding:48px 0 70px;}
+  section{padding-bottom:76px;}
+  .cards{grid-template-columns:1fr;}
+  .card,.package-card,.work-card,.use-card,.contact-card{padding:25px;}
+  .contact-form{grid-template-columns:1fr;}
+  .cta{padding:34px 26px;flex-direction:column;align-items:flex-start;}
+  .btn,.btn-primary,.btn-secondary,.btn-white{width:100%;}
+  footer{width:calc(100% - 14px);flex-direction:column;}
+}
+
+  </style>
+</head>
+<body>
+  <main class="page" id="top">
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="logo-wrap" href="#top" aria-label="Done By Amy home">
+          <img src="images/da_logo_nobg.png" alt="Done By Amy Logo" class="site-logo" />
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#chatbots">AI Chatbots</a>
+          <a href="#packages">Packages</a>
+          <a href="#process">How It Works</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn nav-btn" href="#contact">Find Out More</a>
+        <button class="mobile-toggle" type="button" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="hero">
+        <div>
+          <div class="pill">✦ AI Chatbots Built For Growth</div>
+          <h1>AI Chatbots That Turn Visitors Into <span>Customers.</span></h1>
+          <p class="lead">Done By Amy builds smart website chatbots, AI receptionists and lead capture systems that answer questions, qualify enquiries and help businesses respond instantly — even after hours.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#packages">See Chatbot Packages</a>
+            <a class="btn btn-secondary" href="#contact">Build My AI Chatbot</a>
+          </div>
+          <div class="mini-proof">
+            <span>24/7 replies</span>
+            <span>Lead capture</span>
+            <span>Booking flows</span>
+            <span>CRM handover</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="AI chatbot demo mockup">
+          <div class="hero-circle"></div>
+          <div class="hero-card">
+            <div class="chat-top">
+              <span>Amy AI Assistant</span>
+              <span class="status">Online</span>
+            </div>
+            <div class="chat-bubble bot">Hi 👋 I can help with prices, bookings or quote requests.</div>
+            <div class="chat-bubble user">I need help automating customer enquiries.</div>
+            <div class="chat-bubble bot">Perfect. What type of business do you run?</div>
+            <div class="chat-bubble user">A local service business.</div>
+            <div class="chat-bubble bot">Great — I’ll collect your details and send them to Amy.</div>
+            <div class="lead-captured"><span>Lead captured</span><span>✓</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="stats" aria-label="Chatbot benefits">
+        <div class="stat"><strong>24/7</strong><span>Customer support without hiring extra staff.</span></div>
+        <div class="stat"><strong>Instant</strong><span>Replies to website visitors and enquiries.</span></div>
+        <div class="stat"><strong>More Leads</strong><span>Capture names, phone numbers and service needs automatically.</span></div>
+      </div>
+
+      <section id="chatbots">
+        <div class="section-head">
+          <div class="eyebrow">What We Can Build For You</div>
+          <h2>AI Chatbot Systems For Small Business</h2>
+          <p>Simple AI systems designed to reduce admin, improve response times and help turn website traffic into real enquiries.</p>
+        </div>
+
+        <div class="cards">
+          <div class="card featured">
+            <div class="icon">💬</div>
+            <h3>AI Chatbots</h3>
+            <p>Website chatbot widgets that answer FAQs, capture leads and guide customers to the next step.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+          <div class="card">
+            <div class="icon">👩‍💻</div>
+            <h3>AI Receptionists</h3>
+            <p>Virtual front-desk assistants that qualify enquiries, collect details and help customers take action.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+          <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Automations</h3>
+            <p>Connect forms, email, SMS, calendars, spreadsheets, CRMs and follow-up workflows.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Landing Pages</h3>
+            <p>Modern conversion-focused pages built around your chatbot, offer and lead capture process.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages">
+        <div class="section-head">
+          <div class="eyebrow">Chatbot Packages</div>
+          <h2>Choose The Chatbot Your Business Needs</h2>
+          <p>Start with a simple FAQ bot or build a full AI business assistant with lead capture, booking logic and workflow integrations.</p>
+        </div>
+
+        <div class="packages">
+          <div class="package-card">
+            <div class="badge">Starter</div>
+            <h3>FAQ Chatbot</h3>
+            <div class="price">$99 <span>/month</span></div>
+            <div class="setup">Setup $199</div>
+            <p>Best for businesses that need quick answers on their website.</p>
+            <ul>
+              <li>Business FAQ responses</li>
+              <li>Website chatbot widget</li>
+              <li>Basic lead capture</li>
+              <li>Email notifications</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">Find Out More</a>
+          </div>
+
+          <div class="package-card featured">
+            <div class="badge">Most Popular</div>
+            <h3>Lead Capture Chatbot</h3>
+            <div class="price">$199 <span>/month</span></div>
+            <div class="setup">Setup $299</div>
+            <p>Best for turning website visitors into qualified enquiries.</p>
+            <ul>
+              <li>Lead qualification questions</li>
+              <li>Email and phone capture</li>
+              <li>CRM or spreadsheet handover</li>
+              <li>Advanced conversation flows</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Find Out More</a>
+          </div>
+
+          <div class="package-card">
+            <div class="badge">Advanced</div>
+            <h3>AI Business Assistant</h3>
+            <div class="price">$499 <span>/month</span></div>
+            <div class="setup">Setup $699</div>
+            <p>Best for businesses needing custom automations and integrations.</p>
+            <ul>
+              <li>Calendar booking logic</li>
+              <li>Custom integrations</li>
+              <li>AI workflow automation</li>
+              <li>Advanced handover rules</li>
+            </ul>
+            <a class="btn btn-secondary" href="#contact">Find Out More</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div class="eyebrow">Use Cases</div>
+          <h2>What Your AI Chatbot Can Do</h2>
+          <p>Your chatbot can be set up around the exact questions, services and customer flow your business needs.</p>
+        </div>
+        <div class="use-grid">
+          <div class="use-card"><h3>Answer FAQs</h3><p>Opening hours, service areas, pricing basics, process questions and common customer support topics.</p></div>
+          <div class="use-card"><h3>Capture Quote Requests</h3><p>Collect name, phone, email, location, service needed and notes before your team follows up.</p></div>
+          <div class="use-card"><h3>Book Appointments</h3><p>Guide customers to booking links, preferred times or manual callback requests.</p></div>
+          <div class="use-card"><h3>Qualify Leads</h3><p>Ask smart questions so you know who is ready, what they need and how urgent it is.</p></div>
+          <div class="use-card"><h3>Recommend Services</h3><p>Help customers choose the right service or package based on their answers.</p></div>
+          <div class="use-card"><h3>Trigger Automations</h3><p>Send enquiry details into email, spreadsheets, CRMs, SMS flows or follow-up systems.</p></div>
+        </div>
+      </section>
+
+  
+
+      <section id="solutions">
+        <div class="section-head">
+          <div class="eyebrow">Solutions We’ve Built</div>
+          <h2>Real AI Systems Built For Businesses</h2>
+          <p>These systems show how chatbot, calling, lead capture and workflow automation can work together.</p>
+        </div>
+
+        <div class="work-grid">
+          <div class="work-card">
+            <div class="solution-thumb"><img src="images/leadcatch.png" alt="LeadCatch Missed Call System" class="solution-img" /></div>
+            <h3>LeadCatch Missed Call System</h3>
+            <p>Missed call text-back automation and AI lead capture system.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+          <div class="work-card">
+            <div class="solution-thumb"><img src="images/auto_dial.png" alt="AI Telemarketer" class="solution-img" /></div>
+            <h3>AI Telemarketer</h3>
+            <p>AI-powered outbound calling agent for lead follow-up and appointment setting.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+          <div class="work-card">
+            <div class="solution-thumb"><img src="images/yyb.png" alt="Yard Yakka Boys App" class="solution-img" /></div>
+            <h3>Custom Apps</h3>
+            <p>Custom workflow and operations automation platform for booking, jobs and invoicing.</p>
+            <a class="learn" href="#contact">Find Out More →</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div class="eyebrow">FAQ</div>
+          <h2>Common Questions</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Can the chatbot match my brand?</summary><p>Yes. The chatbot can use your colours, tone, services, questions and business details.</p></details>
+          <details><summary>Can it capture leads?</summary><p>Yes. It can collect names, phone numbers, email addresses, service types, locations and notes.</p></details>
+          <details><summary>Can it connect to my systems?</summary><p>Depending on the package, it can connect to tools like forms, email, spreadsheets, CRMs, calendars and automations.</p></details>
+          <details><summary>Do I need a new website?</summary><p>No. The chatbot can usually be added to an existing website. If your site needs improvement, a chatbot landing page can also be built.</p></details>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h2>Ready To Add AI To Your Website?</h2>
+          <p>Tell us about your business and we’ll recommend the best chatbot setup for your goals.</p>
+        </div>
+        <a class="btn btn-white" href="#contact">Find Out More</a>
+      </section>
+
+      <section id="contact">
+        <div class="contact-card">
+          <div class="section-head" style="margin-bottom:0;">
+            <div class="eyebrow">Contact</div>
+            <h2>Tell Us About Your Business</h2>
+            <p>Share what you want your chatbot to do and we’ll point you toward the right setup.</p>
+          </div>
+
+          <form class="contact-form" onsubmit="sendForm(event)">
+            <input type="text" id="name" placeholder="Your name" required />
+            <input type="text" id="business" placeholder="Business name" required />
+            <input type="email" id="email" placeholder="Email address" required />
+            <input type="tel" id="phone" placeholder="Phone number" />
+            <select id="package">
+              <option value="">Package interested in</option>
+              <option>FAQ Chatbot - $99/month</option>
+              <option>Lead Capture Chatbot - $199/month</option>
+              <option>AI Business Assistant - $499/month</option>
+              <option>Not sure yet</option>
+            </select>
+            <select id="businessType">
+              <option value="">Business type</option>
+              <option>Tradie / Trade Business</option>
+              <option>NDIS Provider</option>
+              <option>Local Service Business</option>
+              <option>Sales / Appointment Business</option>
+              <option>Other</option>
+            </select>
+            <textarea id="message" placeholder="What do you want your chatbot to help with?"></textarea>
+            <button class="btn btn-primary" type="submit">Send Business Details</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <img src="images/da_logo_nobg.png" alt="Done By Amy Logo" class="footer-logo" />
+    Done By Amy © 2026
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    document.querySelectorAll('#navLinks a').forEach(function(link){
+      link.addEventListener('click', function(){
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    function sendForm(event){
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const business = document.getElementById('business').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const packageChoice = document.getElementById('package').value;
+      const businessType = document.getElementById('businessType').value;
+      const message = document.getElementById('message').value;
+
+      const subject = encodeURIComponent('New AI Chatbot Enquiry - Done By Amy');
+      const body = encodeURIComponent(
+`Name: ${name}
+Business: ${business}
+Email: ${email}
+Phone: ${phone}
+
+Package Interested In: ${packageChoice}
+Business Type: ${businessType}
+
+Message:
+${message}`
+      );
+
+      window.location.href = `mailto:hello@donebyamy.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
