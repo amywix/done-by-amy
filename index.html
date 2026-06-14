@@ -803,30 +803,30 @@ footer{
     Done By Amy © 2026
   </footer>
 
-  <script>
-    function toggleMenu(){
-      document.getElementById('navLinks').classList.toggle('open');
-    }
+ <script>
+  function toggleMenu(){
+    document.getElementById('navLinks').classList.toggle('open');
+  }
 
-    document.querySelectorAll('#navLinks a').forEach(function(link){
-      link.addEventListener('click', function(){
-        document.getElementById('navLinks').classList.remove('open');
-      });
+  document.querySelectorAll('#navLinks a').forEach(function(link){
+    link.addEventListener('click', function(){
+      document.getElementById('navLinks').classList.remove('open');
     });
+  });
 
-    function sendForm(event){
-      event.preventDefault();
+  function sendForm(event){
+    event.preventDefault();
 
-      const name = document.getElementById('name').value;
-      const business = document.getElementById('business').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const packageChoice = document.getElementById('package').value;
-      const businessType = document.getElementById('businessType').value;
-      const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value;
+    const business = document.getElementById('business').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const packageChoice = document.getElementById('package').value;
+    const businessType = document.getElementById('businessType').value;
+    const message = document.getElementById('message').value;
 
-      const subject = encodeURIComponent('New AI Chatbot Enquiry - Done By Amy');
-      const body = encodeURIComponent(
+    const subject = encodeURIComponent('New AI Chatbot Enquiry - Done By Amy');
+    const body = encodeURIComponent(
 `Name: ${name}
 Business: ${business}
 Email: ${email}
@@ -837,12 +837,21 @@ Business Type: ${businessType}
 
 Message:
 ${message}`
-      );
+    );
 
-      window.location.href = `mailto:hello@donebyamy.com?subject=${subject}&body=${body}`;
-    }
+    window.location.href = `mailto:hello@donebyamy.com?subject=${subject}&body=${body}`;
+  }
+</script>
 
-<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-<zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cmqd08ioo000h9n6jguwkpz72' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
+<script
+  async
+  type="module"
+  src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js">
+</script>
+
+<zapier-interfaces-chatbot-embed
+  is-popup="true"
+  chatbot-id="cmqd08ioo000h9n6jguwkpz72">
+</zapier-interfaces-chatbot-embed>
 </body>
 </html>
