@@ -1,857 +1,1483 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Done By Amy | AI Chatbots for Small Business</title>
-  <meta name="description" content="Done By Amy builds AI chatbots, AI receptionists, lead capture bots and automation systems for small businesses that want faster replies, more leads and less admin." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-/* =========================================================
-DONE BY AMY
-CLEAN PRODUCTION THEME
-WHITE PAGE + PURPLE ACCENTS + DARK PURPLE HEADER
-========================================================= */
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Done By Amy | Business Automation & AI</title>
+<meta name="description"
+content="Done By Amy automates social media, messages, email, lead follow-up, bookings and business systems so you can spend less time doing admin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
 :root{
-  --bg:#f6f7fb;
-  --bg-soft:#f0f2f8;
-  --card:#ffffff;
-  --card-soft:#fbfaff;
-  --text:#111827;
-  --heading:#0f172a;
-  --muted:#667085;
+  --black:#07050b;
+  --black2:#0e0916;
+  --purple:#8b5cf6;
+  --purple2:#a855f7;
+  --pink:#ec4899;
   --white:#ffffff;
-
-  --purple:#9333ea;
-  --purple-dark:#35105f;
-  --purple-deep:#1b0630;
-  --purple-mid:#581c87;
-  --purple-light:#c084fc;
-  --purple-soft:#faf5ff;
-
-  --border:#e7eaf1;
-  --border-purple:rgba(147,51,234,.14);
-  --shadow:0 20px 55px rgba(15,23,42,.08);
-  --shadow-purple:0 18px 42px rgba(147,51,234,.20);
-  --gradient:linear-gradient(135deg,#7e22ce 0%,#9333ea 52%,#c084fc 100%);
-  --header-gradient:linear-gradient(135deg,#14031f 0%,#2a0a4a 42%,#581c87 100%);
-  --radius:28px;
+  --text:#f8f7fb;
+  --muted:#aaa3b5;
+  --line:rgba(255,255,255,.10);
+  --gradient:
+    linear-gradient(
+      135deg,
+      #6d28d9 0%,
+      #9333ea 45%,
+      #ec4899 100%
+    );
 }
-
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+html{
+  scroll-behavior:smooth;
+}
 body{
-  font-family:'Inter',sans-serif;
+  font-family:'Inter',Arial,sans-serif;
   background:
-    radial-gradient(circle at top left,rgba(147,51,234,.07),transparent 28%),
-    radial-gradient(circle at bottom right,rgba(192,132,252,.08),transparent 32%),
-    linear-gradient(180deg,#ffffff 0%,#f7f9fc 45%,#eef2f7 100%);
+    radial-gradient(circle at 15% 0%,rgba(139,92,246,.20),transparent 28%),
+    radial-gradient(circle at 90% 15%,rgba(236,72,153,.12),transparent 25%),
+    var(--black);
   color:var(--text);
   overflow-x:hidden;
 }
-a{text-decoration:none;color:inherit;}
-img{display:block;max-width:100%;}
-ul{padding-left:18px;}
-
-.page{
-  width:min(1400px,calc(100% - 28px));
-  margin:24px auto;
-  background:rgba(255,255,255,.92);
-  border:1px solid rgba(255,255,255,.9);
-  border-radius:36px;
-  overflow:clip;
-  box-shadow:var(--shadow);
+a{
+  text-decoration:none;
+  color:inherit;
 }
-.container{width:min(1180px,calc(100% - 40px));margin:auto;}
-
-/* HEADER / MENU FIX */
-.site-header{
+.container{
+  width:min(1180px,calc(100% - 36px));
+  margin:auto;
+}
+/* ================= HEADER ================= */
+header{
   position:sticky;
   top:0;
   z-index:1000;
-  width:100%;
-  min-height:92px;
-  background:var(--header-gradient);
-  border-bottom:1px solid rgba(255,255,255,.10);
-  box-shadow:0 16px 40px rgba(31,7,55,.25);
+  background:rgba(7,5,11,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
 }
-.nav-wrap{
-  width:min(1320px,calc(100% - 56px));
-  min-height:92px;
-  margin:auto;
+.nav{
+  min-height:82px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:24px;
+  gap:30px;
 }
-.logo-wrap{display:flex;align-items:center;flex:0 0 auto;}
-.site-logo{
-  width:174px;
-  height:auto;
-  max-height:66px;
-  object-fit:contain;
-  filter:drop-shadow(0 2px 8px rgba(0,0,0,.35));
+.logo{
+  width:155px;
 }
 .nav-links{
   display:flex;
   align-items:center;
-  justify-content:center;
-  gap:30px;
-  flex:1;
+  gap:28px;
 }
 .nav-links a{
-  color:#f5f3ff;
-  font-size:14px;
-  font-weight:750;
-  line-height:1;
-  white-space:nowrap;
-  opacity:.94;
-  transition:.22s ease;
+  font-size:13px;
+  font-weight:800;
+  color:#d7d0df;
 }
-.nav-links a:hover{color:#e9d5ff;opacity:1;}
-.nav-btn{flex:0 0 auto;white-space:nowrap;}
-.mobile-toggle{
+.nav-links a:hover{
+  color:white;
+}
+.nav-button{
+  background:var(--gradient);
+  padding:13px 18px;
+  border-radius:13px;
+  color:white!important;
+  box-shadow:0 12px 30px rgba(139,92,246,.25);
+}
+.menu{
   display:none;
+  border:1px solid var(--line);
+  background:#ffffff08;
+  color:white;
   width:44px;
   height:44px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-  color:white;
-  font-size:22px;
-  cursor:pointer;
+  border-radius:12px;
+  font-size:20px;
 }
-
-/* BUTTONS */
-.btn,
-.btn-primary,
-.btn-secondary,
-.btn-white{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:15px 22px;
-  border-radius:15px;
-  font-size:14px;
-  font-weight:800;
-  line-height:1;
-  border:0;
-  cursor:pointer;
-  transition:.22s ease;
-}
-.btn:hover,
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-white:hover{transform:translateY(-2px);}
-.btn-primary,
-.primary{
-  background:var(--gradient);
-  color:white;
-  border:1px solid rgba(255,255,255,.30);
-  box-shadow:var(--shadow-purple);
-}
-.btn-secondary,
-.secondary{
-  background:white;
-  color:#271137;
-  border:1px solid var(--border-purple);
-  box-shadow:0 12px 28px rgba(15,23,42,.05);
-}
-.btn-white{
-  background:white;
-  color:var(--purple-mid);
-  border:1px solid rgba(255,255,255,.50);
-}
-.nav-btn{
-  background:white;
-  color:var(--purple-mid);
-  box-shadow:0 14px 30px rgba(0,0,0,.18);
-}
-
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-  position:relative;
+  min-height:730px;
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);
-  gap:70px;
+  grid-template-columns:1fr 1fr;
   align-items:center;
-  padding:92px 0 90px;
+  gap:60px;
+  padding:90px 0;
 }
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:-60px -80px auto auto;
-  width:420px;
-  height:420px;
-  background:radial-gradient(circle,rgba(147,51,234,.12),transparent 66%);
-  pointer-events:none;
-}
-.pill{
+.eyebrow{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:10px 18px;
-  border-radius:999px;
-  background:rgba(147,51,234,.08);
-  border:1px solid rgba(147,51,234,.14);
-  color:var(--purple);
-  font-size:12px;
+  color:#d8b4fe;
+  font-size:11px;
   font-weight:900;
-  letter-spacing:.08em;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  margin-bottom:26px;
+  margin-bottom:22px;
+}
+.eyebrow:before{
+  content:"";
+  width:28px;
+  height:2px;
+  background:var(--gradient);
 }
 h1{
-  font-size:clamp(3rem,6vw,5.3rem);
-  line-height:.94;
-  letter-spacing:-.07em;
-  margin-bottom:26px;
-  color:var(--heading);
+  font-size:clamp(3.4rem,7vw,6.5rem);
+  line-height:.91;
+  letter-spacing:-.075em;
+  margin-bottom:28px;
 }
-h1 span,
 .gradient{
-  background:linear-gradient(135deg,#7e22ce,#a855f7,#c084fc);
+  background:var(--gradient);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-.lead{
-  max-width:660px;
-  color:var(--muted);
+.hero-text{
   font-size:18px;
-  line-height:1.85;
-  margin-bottom:34px;
+  line-height:1.8;
+  color:var(--muted);
+  max-width:650px;
+  margin-bottom:32px;
 }
-.actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
-.mini-proof{display:flex;flex-wrap:wrap;gap:12px;}
-.mini-proof span{
-  padding:10px 14px;
-  border-radius:999px;
-  background:#fff;
-  border:1px solid var(--border-purple);
-  color:#4b5563;
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:15px 21px;
+  border-radius:15px;
   font-size:13px;
+  font-weight:900;
+  border:1px solid var(--line);
+  transition:.2s;
+}
+.btn:hover{
+  transform:translateY(-2px);
+}
+.primary{
+  background:var(--gradient);
+  border:0;
+  box-shadow:0 15px 35px rgba(139,92,246,.25);
+}
+.secondary{
+  background:#ffffff08;
+}
+.proof{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+.proof span{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:#bbb2c5;
+  font-size:11px;
   font-weight:800;
 }
-.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:500px;}
-.hero-circle{
-  position:absolute;
-  width:390px;
-  height:390px;
-  border-radius:50%;
-  border:2px dashed rgba(147,51,234,.18);
-  background:radial-gradient(circle,rgba(147,51,234,.06),transparent 65%);
-}
-.hero-card{
+/* ================= AUTOMATION VISUAL ================= */
+.automation-demo{
   position:relative;
-  z-index:2;
-  width:min(100%,390px);
-  background:white;
-  border:1px solid var(--border-purple);
-  border-radius:30px;
-  padding:22px;
-  box-shadow:0 24px 70px rgba(15,23,42,.12);
-}
-.chat-top{
   display:flex;
   align-items:center;
+  justify-content:center;
+  min-height:520px;
+}
+.glow{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(139,92,246,.25),
+    transparent 68%
+  );
+}
+.demo{
+  position:relative;
+  width:min(430px,100%);
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:rgba(20,13,31,.92);
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+.demo-header{
+  display:flex;
   justify-content:space-between;
-  gap:14px;
-  background:var(--gradient);
-  color:white;
-  padding:18px 20px;
-  border-radius:18px;
+  align-items:center;
+  padding:10px 5px 18px;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
   font-weight:900;
+}
+.live{
+  color:#86efac;
+  font-size:9px;
+}
+.flow{
+  display:grid;
+  gap:11px;
+  padding-top:18px;
+}
+.flow-item{
+  display:grid;
+  grid-template-columns:42px 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  background:#ffffff05;
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+.flow-icon{
+  width:42px;
+  height:42px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:13px;
+  background:#ffffff08;
+  font-size:20px;
+}
+.flow-item strong{
+  display:block;
+  font-size:12px;
+  margin-bottom:3px;
+}
+.flow-item small{
+  color:#888091;
+  font-size:9px;
+}
+.arrow{
+  color:#a78bfa;
+}
+.success{
+  padding:14px;
+  background:linear-gradient(
+    135deg,
+    rgba(139,92,246,.15),
+    rgba(236,72,153,.08)
+  );
+  border:1px solid rgba(139,92,246,.25);
+  border-radius:15px;
+  color:#d9c7eb;
+  font-size:10px;
+}
+/* ================= TICKER ================= */
+.ticker{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+  overflow:hidden;
+}
+.ticker-inner{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:28px;
+  color:#847b91;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.ticker-inner b{
+  color:#d6c6e3;
+}
+/* ================= SECTIONS ================= */
+section{
+  padding:110px 0;
+  scroll-margin-top:90px;
+}
+.section-heading{
+  max-width:760px;
+  margin-bottom:50px;
+}
+h2{
+  font-size:clamp(2.6rem,5vw,4.5rem);
+  line-height:.98;
+  letter-spacing:-.06em;
   margin-bottom:18px;
 }
-.status{
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.16);
+.section-heading p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:15px;
 }
-.chat-bubble{
-  padding:15px 17px;
-  border-radius:18px;
-  margin-bottom:13px;
-  line-height:1.6;
-  font-size:14px;
-}
-.bot{width:86%;background:#faf5ff;color:#4b5563;border:1px solid rgba(147,51,234,.08);}
-.user{width:82%;margin-left:auto;background:var(--gradient);color:white;}
-.lead-captured{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-top:16px;
-  padding:15px 17px;
-  border-radius:18px;
-  background:#f0fdf4;
-  color:#166534;
-  font-weight:900;
-  border:1px solid #bbf7d0;
-}
-
-/* STATS */
-.stats{
+/* ================= AUTOMATIONS ================= */
+.automation-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
-  margin-bottom:100px;
 }
-.stat{
-  background:white;
-  border:1px solid var(--border-purple);
-  border-radius:24px;
-  padding:26px;
-  box-shadow:0 10px 28px rgba(15,23,42,.05);
+.card{
+  padding:29px;
+  min-height:285px;
+  border:1px solid var(--line);
+  border-radius:25px;
+  background:linear-gradient(
+    180deg,
+    #ffffff07,
+    #ffffff02
+  );
+  transition:.25s;
 }
-.stat strong{display:block;color:var(--purple);font-size:32px;margin-bottom:8px;}
-.stat span{color:var(--muted);line-height:1.65;}
-
-/* SECTIONS */
-section{padding-bottom:105px;scroll-margin-top:118px;}
-.section-head{max-width:780px;margin-bottom:54px;}
-.eyebrow{
-  color:var(--purple);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
-h2{
-  font-size:clamp(2.4rem,4.5vw,4.1rem);
-  line-height:1;
-  letter-spacing:-.055em;
-  color:var(--heading);
-  margin-bottom:18px;
-}
-.section-head p,.section-copy{color:var(--muted);line-height:1.9;font-size:16px;}
-
-/* GRIDS */
-.cards,.packages,.work-grid,.use-grid{display:grid;gap:22px;align-items:stretch;}
-.cards{grid-template-columns:repeat(4,1fr);}
-.packages{grid-template-columns:repeat(3,1fr);}
-.work-grid{grid-template-columns:repeat(3,1fr);}
-.use-grid{grid-template-columns:repeat(3,1fr);}
-
-.card,.package-card,.work-card,.use-card,.contact-card,.faq details{
-  position:relative;
-  background:white;
-  border:1px solid var(--border-purple);
-  border-radius:26px;
-  padding:30px;
-  box-shadow:0 12px 32px rgba(15,23,42,.055);
-  overflow:hidden;
-  transition:.26s ease;
-}
-.card:hover,.package-card:hover,.work-card:hover,.use-card:hover{
+.card:hover{
   transform:translateY(-5px);
-  border-color:rgba(147,51,234,.28);
-  box-shadow:0 20px 48px rgba(15,23,42,.09);
+  border-color:rgba(168,85,247,.45);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
-.card::before,.package-card::before,.work-card::before,.use-card::before{
-  content:"";
-  position:absolute;
-  top:-90px;
-  right:-90px;
-  width:190px;
-  height:190px;
-  background:radial-gradient(circle,rgba(147,51,234,.10),transparent 70%);
-}
-.featured{border-color:rgba(147,51,234,.30);box-shadow:0 16px 42px rgba(147,51,234,.10);}
 .icon{
-  width:68px;
-  height:68px;
-  border-radius:22px;
-  background:linear-gradient(135deg,rgba(147,51,234,.13),rgba(192,132,252,.08));
-  color:var(--purple);
+  width:58px;
+  height:58px;
   display:flex;
-  align-items:center;
   justify-content:center;
-  font-size:30px;
+  align-items:center;
+  border-radius:18px;
+  background:linear-gradient(
+    135deg,
+    rgba(139,92,246,.18),
+    rgba(236,72,153,.10)
+  );
+  border:1px solid var(--line);
+  font-size:27px;
   margin-bottom:22px;
 }
-.card h3,.package-card h3,.work-card h3,.use-card h3{font-size:24px;color:var(--heading);margin-bottom:14px;}
-.card p,.package-card p,.work-card p,.use-card p{color:var(--muted);line-height:1.8;margin-bottom:24px;}
-.learn{position:relative;z-index:2;color:var(--purple);font-weight:900;margin-top:auto;}
-
-/* PRICING */
-.badge{
-  display:inline-flex;
-  padding:8px 14px;
-  border-radius:999px;
-  background:rgba(147,51,234,.08);
-  border:1px solid rgba(147,51,234,.10);
-  color:var(--purple);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:20px;
+.card h3{
+  font-size:20px;
+  margin-bottom:11px;
 }
-.price{font-size:52px;font-weight:900;color:var(--purple);margin:15px 0 4px;}
-.price span{font-size:16px;color:var(--muted);}
-.setup{font-weight:900;color:#334155;margin-bottom:16px;}
-.package-card ul{color:var(--muted);line-height:2;margin:10px 0 28px;}
-.package-card .btn{margin-top:auto;}
-
-/* PROCESS */
-.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;}
-.process{display:grid;gap:16px;}
-.process-step{
-  display:grid;
-  grid-template-columns:56px 1fr;
-  gap:18px;
-  background:white;
-  border:1px solid var(--border-purple);
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 10px 28px rgba(15,23,42,.045);
+.card p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:13px;
 }
-.step-num{
-  width:48px;height:48px;border-radius:16px;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--gradient);color:white;font-weight:900;
-}
-.process-step h3{font-size:20px;margin-bottom:7px;color:var(--heading);}
-.process-step p{color:var(--muted);line-height:1.7;}
-
-/* SOLUTIONS */
-.solution-thumb{
-  height:210px;
+.tags{
   display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:24px;
-  background:linear-gradient(135deg,#fbfaff,#f6edff);
-  border-radius:22px;
-  border:1px solid rgba(147,51,234,.08);
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:20px;
 }
-.solution-img{width:100%;max-width:220px;height:170px;object-fit:contain;filter:drop-shadow(0 12px 22px rgba(147,51,234,.14));}
-
-/* FAQ */
-.faq{display:grid;gap:14px;}
-.faq details{padding:0;}
-.faq summary{cursor:pointer;list-style:none;padding:24px 28px;font-weight:900;color:var(--heading);}
-.faq summary::-webkit-details-marker{display:none;}
-.faq p{padding:0 28px 24px;color:var(--muted);line-height:1.8;}
-
-/* CTA */
-.cta{
-  background:var(--gradient);
-  border-radius:34px;
-  padding:56px;
+.tags span{
+  padding:6px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:#bcaec8;
+  font-size:9px;
+  font-weight:900;
+}
+/* ================= PROBLEM ================= */
+.split{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:55px;
+  align-items:center;
+}
+.problem-list{
+  display:grid;
+  gap:11px;
+  margin-top:28px;
+}
+.problem{
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#ffffff03;
+  color:#bdb4c6;
+  font-size:13px;
+  line-height:1.6;
+}
+.problem strong{
+  color:white;
+}
+.check{
+  color:#c084fc;
+  margin-right:8px;
+}
+.dashboard{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:27px;
+  background:linear-gradient(
+    145deg,
+    #170d24,
+    #0c0811
+  );
+  box-shadow:0 30px 70px rgba(0,0,0,.3);
+}
+.dashboard-title{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  gap:32px;
-  color:white;
-  box-shadow:var(--shadow-purple);
-}
-.cta h2{color:white;margin-bottom:14px;}
-.cta p{color:#f3e8ff;line-height:1.75;}
-
-/* CONTACT */
-.contact-card{padding:42px;}
-.contact-form{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px;}
-.contact-form input,.contact-form select,.contact-form textarea{
-  width:100%;
-  border:1px solid rgba(147,51,234,.13);
-  background:#fff;
-  border-radius:16px;
-  padding:16px 17px;
-  color:var(--text);
-  font-family:inherit;
-  font-size:15px;
-  outline:none;
-}
-.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:rgba(147,51,234,.45);box-shadow:0 0 0 4px rgba(147,51,234,.08);}
-.contact-form textarea{grid-column:1/-1;min-height:130px;resize:vertical;}
-.contact-form button{grid-column:1/-1;}
-
-/* FOOTER */
-footer{
-  width:min(1400px,calc(100% - 28px));
-  margin:0 auto 24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  text-align:center;
-  padding:34px;
-  color:var(--purple);
+  margin-bottom:20px;
+  font-size:13px;
   font-weight:900;
 }
-.footer-logo{width:110px;height:auto;}
-
-/* RESPONSIVE */
-@media(max-width:1120px){
-  .nav-links{gap:20px;}
-  .nav-links a{font-size:13px;}
-  .site-logo{width:154px;}
-  .cards{grid-template-columns:repeat(2,1fr);}
+.status{
+  color:#86efac;
+  font-size:9px;
 }
-@media(max-width:980px){
-  .nav-wrap{width:calc(100% - 36px);}
-  .mobile-toggle{display:flex;align-items:center;justify-content:center;}
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-bottom:14px;
+}
+.metric{
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#ffffff03;
+}
+.metric strong{
+  display:block;
+  font-size:21px;
+}
+.metric small{
+  color:#81788b;
+  font-size:8px;
+}
+.activity{
+  display:grid;
+  gap:8px;
+}
+.activity div{
+  display:grid;
+  grid-template-columns:30px 1fr auto;
+  gap:9px;
+  align-items:center;
+  padding:11px;
+  background:#ffffff03;
+  border-radius:12px;
+  font-size:10px;
+}
+.activity span{
+  color:#aaa1b2;
+}
+.activity b{
+  color:#c084fc;
+  font-size:8px;
+}
+/* ================= INTEGRATIONS ================= */
+.integration-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.integration{
+  text-align:center;
+  padding:21px 14px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#ffffff03;
+}
+.integration-icon{
+  font-size:25px;
+  margin-bottom:9px;
+}
+.integration strong{
+  display:block;
+  font-size:12px;
+}
+.integration small{
+  display:block;
+  color:#7f7789;
+  margin-top:4px;
+  font-size:9px;
+}
+/* ================= PROCESS ================= */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.step{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#ffffff03;
+}
+.number{
+  width:38px;
+  height:38px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:12px;
+  background:var(--gradient);
+  font-size:11px;
+  font-weight:900;
+  margin-bottom:20px;
+}
+.step h3{
+  font-size:16px;
+  margin-bottom:8px;
+}
+.step p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:12px;
+}
+/* ================= CTA ================= */
+.cta{
+  padding:65px;
+  border-radius:34px;
+  border:1px solid rgba(168,85,247,.30);
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(236,72,153,.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #211034,
+      #10091a
+    );
+}
+.cta h2{
+  max-width:750px;
+}
+.cta p{
+  max-width:650px;
+  color:#b9afc4;
+  line-height:1.75;
+  margin-bottom:25px;
+}
+/* ================= FAQ ================= */
+.faq{
+  display:grid;
+  gap:10px;
+}
+details{
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#ffffff03;
+}
+summary{
+  cursor:pointer;
+  list-style:none;
+  padding:21px;
+  font-weight:800;
+  font-size:13px;
+}
+summary::-webkit-details-marker{
+  display:none;
+}
+details p{
+  padding:0 21px 21px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+}
+/* ================= CONTACT ================= */
+.contact{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:45px;
+}
+.contact-box{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:#ffffff03;
+}
+.contact-list{
+  display:grid;
+  gap:10px;
+  margin-top:25px;
+}
+.contact-item{
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  color:#c6bdce;
+  font-size:12px;
+}
+.contact-item strong{
+  display:block;
+  color:white;
+  margin-bottom:3px;
+}
+form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+input,
+select,
+textarea{
+  width:100%;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#09060e;
+  color:white;
+  font:inherit;
+  font-size:12px;
+  outline:none;
+}
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#a855f7;
+  box-shadow:0 0 0 3px #a855f71a;
+}
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+.full{
+  grid-column:1/-1;
+}
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:35px 20px;
+  border-top:1px solid var(--line);
+  color:#766e80;
+  font-size:10px;
+}
+.footer-logo{
+  width:100px;
+  margin:0 auto 10px;
+}
+/* ================= MOBILE ================= */
+@media(max-width:1000px){
   .nav-links{
+    display:none;
     position:absolute;
-    top:92px;
+    top:82px;
     left:18px;
     right:18px;
-    display:none;
     flex-direction:column;
     align-items:stretch;
-    gap:0;
-    padding:14px;
-    background:#24073f;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:20px;
-    box-shadow:0 20px 45px rgba(0,0,0,.28);
+    padding:12px;
+    background:#140c1e;
+    border:1px solid var(--line);
+    border-radius:18px;
   }
-  .nav-links.open{display:flex;}
-  .nav-links a{padding:15px 16px;border-radius:14px;}
-  .nav-links a:hover{background:rgba(255,255,255,.08);}
-  .nav-btn{display:none;}
-  .hero,.split{grid-template-columns:1fr;gap:48px;}
-  .hero{padding-top:66px;}
-  .stats,.packages,.work-grid,.use-grid{grid-template-columns:1fr;}
+  .nav-links.open{
+    display:flex;
+  }
+  .nav-links a{
+    padding:13px;
+  }
+  .menu{
+    display:block;
+  }
+  .hero,
+  .split,
+  .contact{
+    grid-template-columns:1fr;
+  }
+  .automation-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .steps{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 @media(max-width:700px){
-  .page{width:calc(100% - 14px);margin:14px auto;border-radius:24px;}
-  .container{width:calc(100% - 30px);}
-  .site-header,.nav-wrap{min-height:82px;}
-  .nav-links{top:82px;}
-  .site-logo{width:142px;}
-  h1{font-size:3.05rem;letter-spacing:-.06em;}
-  h2{font-size:2.25rem;}
-  .hero{padding:48px 0 70px;}
-  section{padding-bottom:76px;}
-  .cards{grid-template-columns:1fr;}
-  .card,.package-card,.work-card,.use-card,.contact-card{padding:25px;}
-  .contact-form{grid-template-columns:1fr;}
-  .cta{padding:34px 26px;flex-direction:column;align-items:flex-start;}
-  .btn,.btn-primary,.btn-secondary,.btn-white{width:100%;}
-  footer{width:calc(100% - 14px);flex-direction:column;}
+  .container{
+    width:calc(100% - 28px);
+  }
+  .hero{
+    padding:65px 0 75px;
+    min-height:auto;
+  }
+  h1{
+    font-size:3.25rem;
+  }
+  h2{
+    font-size:2.5rem;
+  }
+  .hero-text{
+    font-size:16px;
+  }
+  .automation-grid,
+  .steps{
+    grid-template-columns:1fr;
+  }
+  .integration-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .metrics{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .cta{
+    padding:35px 25px;
+  }
+  .buttons .btn{
+    width:100%;
+  }
+  form{
+    grid-template-columns:1fr;
+  }
+  .full{
+    grid-column:auto;
+  }
 }
-
-  </style>
+</style>
 </head>
 <body>
-  <main class="page" id="top">
-    <header class="site-header">
-      <div class="nav-wrap">
-        <a class="logo-wrap" href="#top" aria-label="Done By Amy home">
-          <img src="images/da_logo_nobg.png" alt="Done By Amy Logo" class="site-logo" />
-        </a>
-
-        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-          <a href="#chatbots">AI Chatbots</a>
-          <a href="#packages">Packages</a>
-          <a href="#process">How It Works</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <a class="btn nav-btn" href="#contact">Find Out More</a>
-        <button class="mobile-toggle" type="button" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-      </div>
-    </header>
-
-    <div class="container">
-      <section class="hero">
-        <div>
-          <div class="pill">✦ AI Chatbots Built For Growth</div>
-          <h1>AI Chatbots That Turn Visitors Into <span>Customers.</span></h1>
-          <p class="lead">Done By Amy builds smart website chatbots, AI receptionists and lead capture systems that answer questions, qualify enquiries and help businesses respond instantly — even after hours.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#packages">See Chatbot Packages</a>
-            <a class="btn btn-secondary" href="#contact">Build My AI Chatbot</a>
-          </div>
-          <div class="mini-proof">
-            <span>24/7 replies</span>
-            <span>Lead capture</span>
-            <span>Booking flows</span>
-            <span>CRM handover</span>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-label="AI chatbot demo mockup">
-          <div class="hero-circle"></div>
-          <div class="hero-card">
-            <div class="chat-top">
-              <span>Amy AI Assistant</span>
-              <span class="status">Online</span>
-            </div>
-            <div class="chat-bubble bot">Hi 👋 I can help with prices, bookings or quote requests.</div>
-            <div class="chat-bubble user">I need help automating customer enquiries.</div>
-            <div class="chat-bubble bot">Perfect. What type of business do you run?</div>
-            <div class="chat-bubble user">A local service business.</div>
-            <div class="chat-bubble bot">Great — I’ll collect your details and send them to Amy.</div>
-            <div class="lead-captured"><span>Lead captured</span><span>✓</span></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="stats" aria-label="Chatbot benefits">
-        <div class="stat"><strong>24/7</strong><span>Customer support without hiring extra staff.</span></div>
-        <div class="stat"><strong>Instant</strong><span>Replies to website visitors and enquiries.</span></div>
-        <div class="stat"><strong>More Leads</strong><span>Capture names, phone numbers and service needs automatically.</span></div>
-      </div>
-
-      <section id="chatbots">
-        <div class="section-head">
-          <div class="eyebrow">What We Can Build For You</div>
-          <h2>AI Chatbot Systems For Small Business</h2>
-          <p>Simple AI systems designed to reduce admin, improve response times and help turn website traffic into real enquiries.</p>
-        </div>
-
-        <div class="cards">
-          <div class="card featured">
-            <div class="icon">💬</div>
-            <h3>AI Chatbots</h3>
-            <p>Website chatbot widgets that answer FAQs, capture leads and guide customers to the next step.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-          <div class="card">
-            <div class="icon">👩‍💻</div>
-            <h3>AI Receptionists</h3>
-            <p>Virtual front-desk assistants that qualify enquiries, collect details and help customers take action.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-          <div class="card">
-            <div class="icon">⚡</div>
-            <h3>Automations</h3>
-            <p>Connect forms, email, SMS, calendars, spreadsheets, CRMs and follow-up workflows.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-          <div class="card">
-            <div class="icon">🌐</div>
-            <h3>Landing Pages</h3>
-            <p>Modern conversion-focused pages built around your chatbot, offer and lead capture process.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="packages">
-        <div class="section-head">
-          <div class="eyebrow">Chatbot Packages</div>
-          <h2>Choose The Chatbot Your Business Needs</h2>
-          <p>Start with a simple FAQ bot or build a full AI business assistant with lead capture, booking logic and workflow integrations.</p>
-        </div>
-
-        <div class="packages">
-          <div class="package-card">
-            <div class="badge">Starter</div>
-            <h3>FAQ Chatbot</h3>
-            <div class="price">$99 <span>/month</span></div>
-            <div class="setup">Setup $199</div>
-            <p>Best for businesses that need quick answers on their website.</p>
-            <ul>
-              <li>Business FAQ responses</li>
-              <li>Website chatbot widget</li>
-              <li>Basic lead capture</li>
-              <li>Email notifications</li>
-            </ul>
-            <a class="btn btn-secondary" href="#contact">Find Out More</a>
-          </div>
-
-          <div class="package-card featured">
-            <div class="badge">Most Popular</div>
-            <h3>Lead Capture Chatbot</h3>
-            <div class="price">$199 <span>/month</span></div>
-            <div class="setup">Setup $299</div>
-            <p>Best for turning website visitors into qualified enquiries.</p>
-            <ul>
-              <li>Lead qualification questions</li>
-              <li>Email and phone capture</li>
-              <li>CRM or spreadsheet handover</li>
-              <li>Advanced conversation flows</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Find Out More</a>
-          </div>
-
-          <div class="package-card">
-            <div class="badge">Advanced</div>
-            <h3>AI Business Assistant</h3>
-            <div class="price">$499 <span>/month</span></div>
-            <div class="setup">Setup $699</div>
-            <p>Best for businesses needing custom automations and integrations.</p>
-            <ul>
-              <li>Calendar booking logic</li>
-              <li>Custom integrations</li>
-              <li>AI workflow automation</li>
-              <li>Advanced handover rules</li>
-            </ul>
-            <a class="btn btn-secondary" href="#contact">Find Out More</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="eyebrow">Use Cases</div>
-          <h2>What Your AI Chatbot Can Do</h2>
-          <p>Your chatbot can be set up around the exact questions, services and customer flow your business needs.</p>
-        </div>
-        <div class="use-grid">
-          <div class="use-card"><h3>Answer FAQs</h3><p>Opening hours, service areas, pricing basics, process questions and common customer support topics.</p></div>
-          <div class="use-card"><h3>Capture Quote Requests</h3><p>Collect name, phone, email, location, service needed and notes before your team follows up.</p></div>
-          <div class="use-card"><h3>Book Appointments</h3><p>Guide customers to booking links, preferred times or manual callback requests.</p></div>
-          <div class="use-card"><h3>Qualify Leads</h3><p>Ask smart questions so you know who is ready, what they need and how urgent it is.</p></div>
-          <div class="use-card"><h3>Recommend Services</h3><p>Help customers choose the right service or package based on their answers.</p></div>
-          <div class="use-card"><h3>Trigger Automations</h3><p>Send enquiry details into email, spreadsheets, CRMs, SMS flows or follow-up systems.</p></div>
-        </div>
-      </section>
-
-  
-
-      <section id="solutions">
-        <div class="section-head">
-          <div class="eyebrow">Solutions We’ve Built</div>
-          <h2>Real AI Systems Built For Businesses</h2>
-          <p>These systems show how chatbot, calling, lead capture and workflow automation can work together.</p>
-        </div>
-
-        <div class="work-grid">
-          <div class="work-card">
-            <div class="solution-thumb"><img src="images/leadcatch.png" alt="LeadCatch Missed Call System" class="solution-img" /></div>
-            <h3>LeadCatch Missed Call System</h3>
-            <p>Missed call text-back automation and AI lead capture system.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-          <div class="work-card">
-            <div class="solution-thumb"><img src="images/auto_dial.png" alt="AI Telemarketer" class="solution-img" /></div>
-            <h3>AI Telemarketer</h3>
-            <p>AI-powered outbound calling agent for lead follow-up and appointment setting.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-          <div class="work-card">
-            <div class="solution-thumb"><img src="images/yyb.png" alt="Yard Yakka Boys App" class="solution-img" /></div>
-            <h3>Custom Apps</h3>
-            <p>Custom workflow and operations automation platform for booking, jobs and invoicing.</p>
-            <a class="learn" href="#contact">Find Out More →</a>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-head">
-          <div class="eyebrow">FAQ</div>
-          <h2>Common Questions</h2>
-        </div>
-        <div class="faq">
-          <details><summary>Can the chatbot match my brand?</summary><p>Yes. The chatbot can use your colours, tone, services, questions and business details.</p></details>
-          <details><summary>Can it capture leads?</summary><p>Yes. It can collect names, phone numbers, email addresses, service types, locations and notes.</p></details>
-          <details><summary>Can it connect to my systems?</summary><p>Depending on the package, it can connect to tools like forms, email, spreadsheets, CRMs, calendars and automations.</p></details>
-          <details><summary>Do I need a new website?</summary><p>No. The chatbot can usually be added to an existing website. If your site needs improvement, a chatbot landing page can also be built.</p></details>
-        </div>
-      </section>
-
-      <section class="cta">
-        <div>
-          <h2>Ready To Add AI To Your Website?</h2>
-          <p>Tell us about your business and we’ll recommend the best chatbot setup for your goals.</p>
-        </div>
-        <a class="btn btn-white" href="#contact">Find Out More</a>
-      </section>
-
-      <section id="contact">
-        <div class="contact-card">
-          <div class="section-head" style="margin-bottom:0;">
-            <div class="eyebrow">Contact</div>
-            <h2>Tell Us About Your Business</h2>
-            <p>Share what you want your chatbot to do and we’ll point you toward the right setup.</p>
-          </div>
-
-          <form class="contact-form" onsubmit="sendForm(event)">
-            <input type="text" id="name" placeholder="Your name" required />
-            <input type="text" id="business" placeholder="Business name" required />
-            <input type="email" id="email" placeholder="Email address" required />
-            <input type="tel" id="phone" placeholder="Phone number" />
-            <select id="package">
-              <option value="">Package interested in</option>
-              <option>FAQ Chatbot - $99/month</option>
-              <option>Lead Capture Chatbot - $199/month</option>
-              <option>AI Business Assistant - $499/month</option>
-              <option>Not sure yet</option>
-            </select>
-            <select id="businessType">
-              <option value="">Business type</option>
-              <option>Tradie / Trade Business</option>
-              <option>NDIS Provider</option>
-              <option>Local Service Business</option>
-              <option>Sales / Appointment Business</option>
-              <option>Other</option>
-            </select>
-            <textarea id="message" placeholder="What do you want your chatbot to help with?"></textarea>
-            <button class="btn btn-primary" type="submit">Send Business Details</button>
-          </form>
-        </div>
-      </section>
+<header>
+  <div class="container nav">
+    <a href="#top">
+      <img
+        src="images/da_logo_nobg.png"
+        class="logo"
+        alt="Done By Amy"
+      >
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#automations">Automations</a>
+      <a href="#systems">Systems</a>
+      <a href="#process">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-button">
+        Book Automation Audit →
+      </a>
+    </nav>
+    <button
+      class="menu"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+  </div>
+</header>
+<main id="top">
+<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="eyebrow">
+      DONE BY AMY · BUSINESS AUTOMATION
     </div>
-  </main>
-
-  <footer>
-    <img src="images/da_logo_nobg.png" alt="Done By Amy Logo" class="footer-logo" />
+    <h1>
+      Stop doing the same
+      <span class="gradient">admin twice.</span>
+    </h1>
+    <p class="hero-text">
+      We connect the software your business already uses and
+      automate the repetitive stuff — social media, messages,
+      emails, lead follow-up, bookings, data entry and more.
+    </p>
+    <div class="buttons">
+      <a
+        href="#contact"
+        class="btn primary"
+      >
+        Find What We Can Automate →
+      </a>
+      <a
+        href="#automations"
+        class="btn secondary"
+      >
+        See Automations
+      </a>
+    </div>
+    <div class="proof">
+      <span>📱 Social Media</span>
+      <span>💬 Messages</span>
+      <span>✉️ Email</span>
+      <span>🎯 Leads</span>
+      <span>🔗 Integrations</span>
+    </div>
+  </div>
+  <div class="automation-demo">
+    <div class="glow"></div>
+    <div class="demo">
+      <div class="demo-header">
+        <span>YOUR BUSINESS AUTOMATION</span>
+        <span class="live">
+          ● LIVE
+        </span>
+      </div>
+      <div class="flow">
+        <div class="flow-item">
+          <div class="flow-icon">📲</div>
+          <div>
+            <strong>
+              Customer sends a message
+            </strong>
+            <small>
+              Instagram / Facebook / WhatsApp
+            </small>
+          </div>
+          <span class="arrow">→</span>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">🤖</div>
+          <div>
+            <strong>
+              Automation responds
+            </strong>
+            <small>
+              AI reply + qualification
+            </small>
+          </div>
+          <span class="arrow">→</span>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">🎯</div>
+          <div>
+            <strong>
+              Lead is captured
+            </strong>
+            <small>
+              CRM / Google Sheets
+            </small>
+          </div>
+          <span class="arrow">→</span>
+        </div>
+        <div class="flow-item">
+          <div class="flow-icon">✉️</div>
+          <div>
+            <strong>
+              Follow-up is triggered
+            </strong>
+            <small>
+              Email / SMS / WhatsApp
+            </small>
+          </div>
+          <span class="arrow">→</span>
+        </div>
+        <div class="success">
+          ✓ Your team only gets involved when a
+          human actually needs to.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="ticker">
+  <div class="ticker-inner">
+    <b>LESS ADMIN</b>
+    <span>•</span>
+    <b>FASTER REPLIES</b>
+    <span>•</span>
+    <b>FEWER MISSED LEADS</b>
+    <span>•</span>
+    <b>BETTER SYSTEMS</b>
+    <span>•</span>
+    <b>MORE TIME</b>
+  </div>
+</div>
+<div class="container">
+<!-- AUTOMATIONS -->
+<section id="automations">
+  <div class="section-heading">
+    <div class="eyebrow">
+      WHAT WE AUTOMATE
+    </div>
+    <h2>
+      Make your business
+      <span class="gradient">
+        run smarter.
+      </span>
+    </h2>
+    <p>
+      We build practical automations around the way your
+      business already works. No giant software replacement required.
+    </p>
+  </div>
+  <div class="automation-grid">
+    <article class="card">
+      <div class="icon">📣</div>
+      <h3>
+        Social Media
+      </h3>
+      <p>
+        Turn social media enquiries, comments and leads
+        into automated workflows so opportunities don't
+        disappear while you're busy.
+      </p>
+      <div class="tags">
+        <span>Instagram</span>
+        <span>Facebook</span>
+        <span>Leads</span>
+      </div>
+    </article>
+    <article class="card">
+      <div class="icon">💬</div>
+      <h3>
+        Messages & WhatsApp
+      </h3>
+      <p>
+        Automatically reply, qualify, remind and follow
+        up with customers through the channels they already use.
+      </p>
+      <div class="tags">
+        <span>WhatsApp</span>
+        <span>SMS</span>
+        <span>Messenger</span>
+      </div>
+    </article>
+    <article class="card">
+      <div class="icon">✉️</div>
+      <h3>
+        Email Automation
+      </h3>
+      <p>
+        Automate confirmations, notifications, reminders,
+        follow-ups and internal emails instead of sending
+        the same messages manually.
+      </p>
+      <div class="tags">
+        <span>Gmail</span>
+        <span>Follow-up</span>
+        <span>Alerts</span>
+      </div>
+    </article>
+    <article class="card">
+      <div class="icon">🎯</div>
+      <h3>
+        Lead Follow-Up
+      </h3>
+      <p>
+        Capture an enquiry once and let your automation
+        move it through your sales and follow-up process.
+      </p>
+      <div class="tags">
+        <span>CRM</span>
+        <span>Sales</span>
+        <span>Lead Capture</span>
+      </div>
+    </article>
+    <article class="card">
+      <div class="icon">📅</div>
+      <h3>
+        Bookings & Reminders
+      </h3>
+      <p>
+        Automate booking requests, confirmations,
+        appointment reminders and customer notifications.
+      </p>
+      <div class="tags">
+        <span>Calendar</span>
+        <span>Bookings</span>
+        <span>Reminders</span>
+      </div>
+    </article>
+    <article class="card">
+      <div class="icon">🔗</div>
+      <h3>
+        System Integration
+      </h3>
+      <p>
+        Connect the software you already pay for so
+        information moves automatically instead of being
+        typed into multiple systems.
+      </p>
+      <div class="tags">
+        <span>Tanda</span>
+        <span>Quickbooks</span>
+        <span>Xero</span>
+   
+      </div>
+    </article>
+  </div>
+</section>
+<!-- SYSTEMS -->
+<section id="systems">
+  <div class="split">
+    <div>
+      <div class="eyebrow">
+        THE PROBLEM
+      </div>
+      <h2>
+        Your software isn't the problem.
+        <span class="gradient">
+          The gaps are.
+        </span>
+      </h2>
+      <p class="section-heading">
+        Businesses often pay for multiple systems but
+        still copy information between them, chase
+        customers manually and repeat the same admin every day.
+      </p>
+      <div class="problem-list">
+        <div class="problem">
+          <span class="check">✓</span>
+          <strong>
+            Someone fills out a form
+          </strong>
+          → staff manually email, text and enter
+          the details somewhere else.
+        </div>
+        <div class="problem">
+          <span class="check">✓</span>
+          <strong>
+            A customer sends a DM
+          </strong>
+          → nobody follows up when the conversation gets busy.
+        </div>
+        <div class="problem">
+          <span class="check">✓</span>
+          <strong>
+            One system has the data
+          </strong>
+          → another system needs the same data typed again.
+        </div>
+        <div class="problem">
+          <span class="check">✓</span>
+          <strong>
+            Staff remember the process
+          </strong>
+          → instead of the process being built into the system.
+        </div>
+      </div>
+    </div>
+    <div class="dashboard">
+      <div class="dashboard-title">
+        <span>
+          Automation Activity
+        </span>
+        <span class="status">
+          ● SYSTEMS CONNECTED
+        </span>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <strong>24/7</strong>
+          <small>WORKFLOW</small>
+        </div>
+        <div class="metric">
+          <strong>08</strong>
+          <small>AUTOMATIONS</small>
+        </div>
+        <div class="metric">
+          <strong>92%</strong>
+          <small>HANDLED</small>
+        </div>
+      </div>
+      <div class="activity">
+        <div>
+          <span>📲</span>
+          <span>New Instagram enquiry captured</span>
+          <b>DONE</b>
+        </div>
+        <div>
+          <span>✉️</span>
+          <span>Welcome email sent automatically</span>
+          <b>DONE</b>
+        </div>
+        <div>
+          <span>🗂️</span>
+          <span>Lead added to CRM</span>
+          <b>DONE</b>
+        </div>
+        <div>
+          <span>💬</span>
+          <span>WhatsApp follow-up scheduled</span>
+          <b>QUEUED</b>
+        </div>
+        <div>
+          <span>🔔</span>
+          <span>Team notification triggered</span>
+          <b>DONE</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- INTEGRATIONS -->
+<section>
+  <div class="section-heading">
+    <div class="eyebrow">
+      SYSTEM INTEGRATION
+    </div>
+    <h2>
+      One workflow.
+      <span class="gradient">
+        Multiple systems.
+      </span>
+    </h2>
+    <p>
+      We can design automation around the software
+      your business already relies on.
+    </p>
+  </div>
+  <div class="integration-grid">
+    <div class="integration">
+      <div class="integration-icon">📅</div>
+      <strong>Deputy</strong>
+      <small>Roster & workforce</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">⏱️</div>
+      <strong>Tanda</strong>
+      <small>Time & payroll</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">💰</div>
+      <strong>Xero</strong>
+      <small>Accounting</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">🧾</div>
+      <strong>POS Systems</strong>
+      <small>Sales & stock</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">📧</div>
+      <strong>Gmail</strong>
+      <small>Email</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">💬</div>
+      <strong>WhatsApp</strong>
+      <small>Messages</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">📱</div>
+      <strong>SMS</strong>
+      <small>Notifications</small>
+    </div>
+    <div class="integration">
+      <div class="integration-icon">📊</div>
+      <strong>Google Sheets</strong>
+      <small>Data hub</small>
+    </div>
+  </div>
+</section>
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-heading">
+    <div class="eyebrow">
+      HOW IT WORKS
+    </div>
+    <h2>
+      We find the boring stuff.
+      <span class="gradient">
+        Then automate it.
+      </span>
+    </h2>
+    <p>
+      You don't need to know what technology you need.
+      Tell us what your staff repeatedly do and we'll
+      map out the workflow.
+    </p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="number">01</div>
+      <h3>
+        Map the workflow
+      </h3>
+      <p>
+        We look at what happens from enquiry to
+        completion and identify repetitive steps.
+      </p>
+    </div>
+    <div class="step">
+      <div class="number">02</div>
+      <h3>
+        Find the gaps
+      </h3>
+      <p>
+        We identify where staff copy, paste, chase,
+        remind, re-enter or manually notify.
+      </p>
+    </div>
+    <div class="step">
+      <div class="number">03</div>
+      <h3>
+        Build the automation
+      </h3>
+      <p>
+        We connect your tools and create the triggers,
+        actions and handovers.
+      </p>
+    </div>
+    <div class="step">
+      <div class="number">04</div>
+      <h3>
+        Test & improve
+      </h3>
+      <p>
+        We test real scenarios, fix edge cases and
+        refine the workflow with you.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- CTA -->
+<section>
+  <div class="cta">
+    <div class="eyebrow">
+      YOUR NEXT AUTOMATION
+    </div>
+    <h2>
+      What could your business
+      <span class="gradient">
+        stop doing manually?
+      </span>
+    </h2>
+    <p>
+      Book an automation audit and we'll look at your
+      current tools, repetitive admin and customer
+      communication to find practical opportunities to automate.
+    </p>
+    <a
+      href="#contact"
+      class="btn primary"
+    >
+      Book an Automation Audit →
+    </a>
+  </div>
+</section>
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-heading">
+    <div class="eyebrow">
+      FAQ
+    </div>
+    <h2>
+      Automation without
+      <span class="gradient">
+        the tech headache.
+      </span>
+    </h2>
+  </div>
+  <div class="faq">
+    <details>
+      <summary>
+        Do I need to replace my current software?
+      </summary>
+      <p>
+        No. The goal is usually to make better use of
+        the systems you already pay for and connect
+        the gaps between them.
+      </p>
+    </details>
+    <details>
+      <summary>
+        Can you automate social media and messages?
+      </summary>
+      <p>
+        Yes. We can design workflows around social
+        enquiries, customer messages, lead capture,
+        notifications and follow-up.
+      </p>
+    </details>
+    <details>
+      <summary>
+        Can you connect multiple systems?
+      </summary>
+      <p>
+        Yes. We can design workflows that move
+        information between supported forms, email,
+        spreadsheets, CRMs, calendars, workforce systems,
+        accounting platforms and messaging tools.
+      </p>
+    </details>
+    <details>
+      <summary>
+        Will automation replace my staff?
+      </summary>
+      <p>
+        The focus is on removing repetitive admin so
+        your team can spend more time on customers,
+        sales and work that actually needs a human.
+      </p>
+    </details>
+    <details>
+      <summary>
+        What if I don't know what to automate?
+      </summary>
+      <p>
+        That's exactly what the automation audit is for.
+        Tell us what your staff repeatedly do and we'll
+        help identify the best opportunities.
+      </p>
+    </details>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact">
+    <div>
+      <div class="eyebrow">
+        LET'S AUTOMATE IT
+      </div>
+      <h2>
+        Tell us what you're
+        <span class="gradient">
+          sick of doing.
+        </span>
+      </h2>
+      <p class="section-heading">
+        Give us the messy version.
+        What software do you use?
+        What do staff repeat?
+        What messages do you send every day?
+        We'll turn it into an automation plan.
+      </p>
+      <div class="contact-list">
+        <div class="contact-item">
+          <strong>
+            📱 Customer communication
+          </strong>
+          Social DMs, SMS, WhatsApp, email & follow-up
+        </div>
+        <div class="contact-item">
+          <strong>
+            ⚙️ Business operations
+          </strong>
+          Roster, data entry, approvals, notifications & reports
+        </div>
+        <div class="contact-item">
+          <strong>
+            🔗 System integration
+          </strong>
+          Connect the platforms your business already relies on
+        </div>
+      </div>
+    </div>
+    <div class="contact-box">
+      <form onsubmit="sendForm(event)">
+        <input
+          id="name"
+          placeholder="Your name"
+          required
+        >
+        <input
+          id="business"
+          placeholder="Business name"
+          required
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="Email address"
+          required
+        >
+        <input
+          id="phone"
+          type="tel"
+          placeholder="Phone number"
+        >
+        <select
+          id="automation"
+          class="full"
+        >
+          <option value="">
+            What do you want to automate?
+          </option>
+          <option>
+            Social media & enquiries
+          </option>
+          <option>
+            Messages / WhatsApp / SMS
+          </option>
+          <option>
+            Email & follow-up
+          </option>
+          <option>
+            Lead capture & sales
+          </option>
+          <option>
+            Bookings & reminders
+          </option>
+          <option>
+            Connect my business systems
+          </option>
+          <option>
+            Not sure — help me find out
+          </option>
+        </select>
+        <textarea
+          id="message"
+          class="full"
+          placeholder="Tell us what you're currently doing manually..."
+        ></textarea>
+        <button
+          type="submit"
+          class="btn primary full"
+        >
+          Send My Automation Enquiry →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer>
+  <img
+    src="images/da_logo_nobg.png"
+    class="footer-logo"
+    alt="Done By Amy"
+  >
+  <div>
     Done By Amy © 2026
-  </footer>
-
- <script>
-  function toggleMenu(){
-    document.getElementById('navLinks').classList.toggle('open');
-  }
-
-  document.querySelectorAll('#navLinks a').forEach(function(link){
-    link.addEventListener('click', function(){
-      document.getElementById('navLinks').classList.remove('open');
+    · Business Automation · AI · System Integration
+  </div>
+</footer>
+<script>
+function toggleMenu(){
+  document
+    .getElementById("navLinks")
+    .classList.toggle("open");
+}
+document
+  .querySelectorAll("#navLinks a")
+  .forEach(function(link){
+    link.addEventListener("click",function(){
+      document
+        .getElementById("navLinks")
+        .classList.remove("open");
     });
   });
-
-  function sendForm(event){
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const business = document.getElementById('business').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const packageChoice = document.getElementById('package').value;
-    const businessType = document.getElementById('businessType').value;
-    const message = document.getElementById('message').value;
-
-    const subject = encodeURIComponent('New AI Chatbot Enquiry - Done By Amy');
-    const body = encodeURIComponent(
+function sendForm(event){
+  event.preventDefault();
+  const name =
+    document.getElementById("name").value;
+  const business =
+    document.getElementById("business").value;
+  const email =
+    document.getElementById("email").value;
+  const phone =
+    document.getElementById("phone").value;
+  const automation =
+    document.getElementById("automation").value;
+  const message =
+    document.getElementById("message").value;
+  const subject =
+    encodeURIComponent(
+      "New Business Automation Enquiry - Done By Amy"
+    );
+  const body =
+    encodeURIComponent(
 `Name: ${name}
 Business: ${business}
 Email: ${email}
 Phone: ${phone}
-
-Package Interested In: ${packageChoice}
-Business Type: ${businessType}
-
-Message:
+What they want to automate:
+${automation}
+Current process / problem:
 ${message}`
     );
-
-    window.location.href = `mailto:hello@donebyamy.com?subject=${subject}&body=${body}`;
-  }
+  window.location.href =
+    `mailto:hello@donebyamy.com?subject=${subject}&body=${body}`;
+}
 </script>
-
-<script
-  async
-  type="module"
-  src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js">
-</script>
-
-<zapier-interfaces-chatbot-embed
-  is-popup="true"
-  chatbot-id="cmqd08ioo000h9n6jguwkpz72">
-</zapier-interfaces-chatbot-embed>
 </body>
 </html>
